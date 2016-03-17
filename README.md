@@ -32,6 +32,11 @@ recordACast(); // 'awesome'
 ## Documentation
 _(Coming soon)_
 
+- FFMPEG_BIN
+- Various GIF creation solutions (e.g. ImageMagick)
+- `--delay`
+- `--duration`
+
 ## Examples
 _(Coming soon)_
 

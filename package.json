@@ -30,7 +30,8 @@
   "dependencies": {
     "commander": "~2.9.0",
     "electron-prebuilt": "~0.37.2",
-    "mousetrap": "~1.5.3"
+    "mousetrap": "~1.5.3",
+    "which": "~1.2.4"
   },
   "devDependencies": {
     "foundry": "~4.0.3",
