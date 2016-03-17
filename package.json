@@ -1,0 +1,50 @@
+{
+  "name": "record-a-gif",
+  "description": "Record a portion of your desktop into a GIF",
+  "version": "1.0.0",
+  "homepage": "https://github.com/twolfson/record-a-gif",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twolfson/record-a-gif.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twolfson/record-a-gif/issues"
+  },
+  "main": "lib/record-a-gif",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "Unlicense",
+  "scripts": {
+    "precheck": "twolfson-style precheck lib/ test/",
+    "lint": "twolfson-style lint lib/ test/",
+    "pretest": "twolfson-style install",
+    "test": "npm run precheck && mocha --reporter dot && npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "foundry": "~4.0.3",
+    "foundry-release-git": "~2.0.2",
+    "foundry-release-npm": "~2.0.2",
+    "jscs": "~1.7.3",
+    "jshint": "~2.5.10",
+    "mocha": "~1.11.0",
+    "twolfson-style": "~1.6.0"
+  },
+  "keywords": [
+    "record",
+    "gif",
+    "screencast"
+  ],
+  "foundry": {
+    "releaseCommands": [
+      "foundry-release-git",
+      "foundry-release-npm"
+    ]
+  }
+}
