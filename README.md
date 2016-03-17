@@ -7,7 +7,14 @@ Select and record a portion of your desktop
 [Electron]: https://github.com/atom/electron
 [FFmpeg]: https://www.ffmpeg.org/
 
-![Select an area](http://i.imgur.com/hOIceGa.png) `->` ![Get screencast](http://i.imgur.com/jO8vvMa.gif)
+## Demonstration
+**Select an area:**
+
+![Select an area image](http://i.imgur.com/hOIceGa.png)
+
+**Get a screencast:**
+
+![Get a screencast image](http://i.imgur.com/jO8vvMa.gif)
 
 ## Requirements
 - X11 server, [FFmpeg][] requires this for its `x11grab` functionality
