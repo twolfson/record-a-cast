@@ -4,6 +4,8 @@ Record a portion of your desktop into a GIF
 
 `record-a-gif` was created out of frustration for either poor UI, poor compatibility with Linux, or both. It's based on well-tested technologies (e.g. [Electron][], [FFmpeg][]) so it should work well on most environments.
 
+This project's UI is based on Shutter's UI which we found intuitive and practical.
+
 [Electron]: https://github.com/atom/electron
 [FFmpeg]: https://www.ffmpeg.org/
 
