@@ -10,11 +10,15 @@ Select and record a portion of your desktop
 ## Demonstration
 **1. Select an area**
 
-![Select an area image](http://i.imgur.com/hOIceGa.png)
+![Select an area image][]
+
+[Select an area image]: http://i.imgur.com/hOIceGa.png)
 
 **2. Get a screencast**
 
-![Get a screencast image](http://i.imgur.com/jO8vvMa.gif)
+![Get a screencast image][]
+
+[Get a screencast image]: http://i.imgur.com/jO8vvMa.gif
 
 ## Requirements
 - X11 server, [FFmpeg][] requires this for its `x11grab` functionality
@@ -31,51 +35,77 @@ Select and record a portion of your desktop
 [Node.js]: http://nodejs.org/
 
 ## Getting Started
-Install the module with: `npm install record-a-cast`
+Install the module globally via: `npm install -g record-a-cast`
 
-```js
-var recordACast = require('record-a-cast');
-recordACast(); // 'awesome'
-```
+Then, start running the application via `record-a-cast recording.mov`
+
+You will be prompted to select an area via a draggable/resizable window.
+
+![Select an area image][]
+
+After the area has been placed, press `Enter` and FFmpeg will begin recording that area.
+
+To stop recording, send a keyboard interrupt to `record-a-cast` (typically `Ctrl+C`).
+
+Your recording will be available at `recording.mov`
+
+![Recording image][Get a screencast image]
 
 ## Documentation
-_(Coming soon)_
+### CLI usage
+Our CLI currently supports the following:
 
-- FFMPEG_BIN
-- Various usages (e.g. `-r` for lower frame rate)
-- Various GIF creation solutions (e.g. ImageMagick)
-- `--delay`
-- `--duration`
-- Support for `--` (e.g. `record-a-cast out.mp4 -- -r 10`)
+```
+$ record-a-cast --help
 
-// TODO: Record and compare the following
-//  avconv recorded GIF
-//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 -pix_fmt rgb24 gif.gif
-//  avconv recorded MP4 that's converted to GIF via `avconv`
-//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 mp4.mp4
-//    avconv -i mp4.mp4 -vf palettegen palette.png
-//      https://ffmpeg.org/ffmpeg-filters.html#palettegen-1
-//    libav-tools seems to lack `palettegen` so this is not plausible
-//  avconv recorded MP4 that's converted to GIF via ImageMagick
-//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 mp4.mp4
-//    avconv -i mp4.mp4 frames/out%03d.png
-//    convert -loop 0 frames/*.png imagemagick.gif
+  Usage: record-a-cast [options] <outfile>
 
-// TODO: For easier development, set `-frames` count and allow this to run on loop
-//   prob name the CLI parameter `--duration`
+  Options:
 
-// TODO: Set low frame rate like 10
-// Attribution to: https://gist.github.com/dergachev/4627207
-//   and https://trac.ffmpeg.org/wiki/Capture/Desktop
-// Never mind this is a literal GIF output and the colors are effed
-//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 -pix_fmt rgb24 -f gif - | cat
-// This is generating transparent images for some reason...
-//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 frames/ffout%03d.png
-// This works but mp4... =_=
-//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 out.mp4
+    -h, --help     output usage information
+    -V, --version  output the version number
+
+```
+
+### Environment variables
+We support the following environment variables:
+
+- FFMPEG_BIN `String` - Path to desired FFmpeg executable
+    - By default, we will search for `ffmpeg` and `avconv` on `PATH`
 
 ## Examples
-_(Coming soon)_
+### Creating a GIF
+**Requirements:**
+
+- [ImageMagick][], image manipulation library which is much better at generating GIFs than FFmpeg
+    - `apt-get install imagemagick`
+
+[ImageMagick]: http://www.imagemagick.org/script/index.php
+
+**Script:**
+
+```bash
+# Record our screencast
+record-a-cast recording.mov
+
+# Output each frame to a folder
+# DEV: When we tried to record directly to PNGs via FFmpeg, they were all empty
+#   Hence, this 2 step process
+# DEV: We use `-r 10` to output 10FPS since GIFs move slower
+mkdir frames
+ffmpeg -i recording.mov -r 10 frames/recording%03d.png
+
+# DEV: If you want to remove any frames from the final product
+#   then navigate to `frames` and delete them
+
+# Combine our frames into a GIF via ImageMagick
+convert -loop 0 frames/recording*.png recording.gif
+```
+
+Want more variations on this? See the following links:
+
+- https://gist.github.com/dergachev/4627207
+- https://gist.github.com/SlexAxton/4989674
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via `npm run lint` and test via `npm test`.
