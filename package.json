@@ -25,6 +25,7 @@
   "license": "Unlicense",
   "scripts": {
     "lint": "twolfson-style lint bin/ lib/",
+    "select-geometry": "electron bin/select-geometry",
     "test": "npm run lint"
   },
   "dependencies": {
