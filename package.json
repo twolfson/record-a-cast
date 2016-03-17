@@ -29,7 +29,10 @@
     "pretest": "twolfson-style install",
     "test": "npm run precheck && mocha --reporter dot && npm run lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "commander": "~2.9.0",
+    "electron-prebuilt": "~0.37.2"
+  },
   "devDependencies": {
     "foundry": "~4.0.3",
     "foundry-release-git": "~2.0.2",
