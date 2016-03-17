@@ -22,6 +22,9 @@
       body {
         cursor: -webkit-grab;
         cursor: grab;
+
+        /* https://github.com/corysimmons/typographic/blob/2.9.3/scss/typographic.scss#L34 */
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
       }
       body.is-dragging {
         cursor: -webkit-grabbing;
@@ -29,22 +32,31 @@
       }
 
       .initial-prompt {
+        /* Break our prompt out of the flow and fill window */
         position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+
+        /* Style our text */
         text-align: center;
+        font-size: 20px;
         color: white;
+
+        /* Pad our container to prevent touching the border */
+        padding: 0 10px;
       }
 
       .dashed-frame {
-        /* TODO: Consider adjusting size of frame based on media size (e.g. smaller dashes for sub-100 */
         border: 5px dashed #CCCCCC;
         height: 100%;
       }
     </style>
   </head>
   <body>
-    <!-- TODO: Revisit prompt, first let's get it running -->
-    <!-- <p class="initial-prompt">Resize and move the frame as desired. Then, press <kbd>Enter</kbd> to continue.</p> -->
-    <!-- TODO: Add support for window dragging, maybe via Unidragger -->
+    <p class="initial-prompt">Resize and move the frame as desired. Then, press <kbd>Enter</kbd> to continue.</p>
     <div class="dashed-frame"></div>
     <script src="select-geometry.js"></script>
   </body>
