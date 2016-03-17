@@ -6,6 +6,7 @@
   "nonbsp": true,
   "undef": true,
   "strict": false,
+  "browser": true,
   "node": true,
   "sub": false,
   "globals": {
