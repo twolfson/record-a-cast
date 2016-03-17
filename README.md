@@ -37,7 +37,33 @@ _(Coming soon)_
 - Various GIF creation solutions (e.g. ImageMagick)
 - `--delay`
 - `--duration`
-- Support for `--` (e.g. `record-a-cast out.mp4 -- -r 10`
+- Support for `--` (e.g. `record-a-cast out.mp4 -- -r 10`)
+
+// TODO: Record and compare the following
+//  avconv recorded GIF
+//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 -pix_fmt rgb24 gif.gif
+//  avconv recorded MP4 that's converted to GIF via `avconv`
+//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 mp4.mp4
+//    avconv -i mp4.mp4 -vf palettegen palette.png
+//      https://ffmpeg.org/ffmpeg-filters.html#palettegen-1
+//    libav-tools seems to lack `palettegen` so this is not plausible
+//  avconv recorded MP4 that's converted to GIF via ImageMagick
+//    avconv -video_size 300x200 -f x11grab -i "$DISPLAY"+100,200 -r 10 -frames 30 mp4.mp4
+//    avconv -i mp4.mp4 frames/out%03d.png
+//    convert -loop 0 frames/*.png imagemagick.gif
+
+// TODO: For easier development, set `-frames` count and allow this to run on loop
+//   prob name the CLI parameter `--duration`
+
+// TODO: Set low frame rate like 10
+// Attribution to: https://gist.github.com/dergachev/4627207
+//   and https://trac.ffmpeg.org/wiki/Capture/Desktop
+// Never mind this is a literal GIF output and the colors are effed
+//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 -pix_fmt rgb24 -f gif - | cat
+// This is generating transparent images for some reason...
+//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 frames/ffout%03d.png
+// This works but mp4... =_=
+//   avconv -video_size 1024x768 -f x11grab -i "$DISPLAY"+100,200 out.mp4
 
 ## Examples
 _(Coming soon)_
