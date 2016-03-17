@@ -1,20 +1,27 @@
 # record-a-cast [![Build status](https://travis-ci.org/twolfson/record-a-cast.svg?branch=master)](https://travis-ci.org/twolfson/record-a-cast)
 
-Record a portion of your desktop into a GIF
+Select and record a portion of your desktop
 
 `record-a-cast` was created out of frustration for either poor UI, poor compatibility with Linux, or both. It's based on well-tested technologies (e.g. [Electron][], [FFmpeg][]) so it should work well on most environments.
 
-This project's UI is based on Shutter's UI which we found intuitive and practical.
-
 [Electron]: https://github.com/atom/electron
 [FFmpeg]: https://www.ffmpeg.org/
+
+## Requirements
+- X11 server, [FFmpeg][] requires this for its `x11grab` functionality
+- [npm][], usually installed with [Node.js][]
+    - Used for installing dependencies
+- [FFmpeg][], used for recording the screen
+
+[npm]: http://npmjs.org/
+[Node.js]: http://nodejs.org/
 
 ## Getting Started
 Install the module with: `npm install record-a-cast`
 
 ```js
-var recordAGif = require('record-a-cast');
-recordAGif(); // 'awesome'
+var recordACast = require('record-a-cast');
+recordACast(); // 'awesome'
 ```
 
 ## Documentation

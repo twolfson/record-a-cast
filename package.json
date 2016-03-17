@@ -1,6 +1,6 @@
 {
   "name": "record-a-cast",
-  "description": "Record a portion of your desktop into a GIF",
+  "description": "Select and record a portion of your desktop",
   "version": "1.0.0",
   "homepage": "https://github.com/twolfson/record-a-cast",
   "author": {
@@ -44,7 +44,9 @@
   "keywords": [
     "record",
     "gif",
-    "screencast"
+    "movie",
+    "screencast",
+    "cast"
   ],
   "foundry": {
     "releaseCommands": [
