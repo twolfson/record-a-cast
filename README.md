@@ -33,9 +33,11 @@ recordACast(); // 'awesome'
 _(Coming soon)_
 
 - FFMPEG_BIN
+- Various usages (e.g. `-r` for lower frame rate)
 - Various GIF creation solutions (e.g. ImageMagick)
 - `--delay`
 - `--duration`
+- Support for `--` (e.g. `record-a-cast out.mp4 -- -r 10`
 
 ## Examples
 _(Coming soon)_
