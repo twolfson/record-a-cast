@@ -2,6 +2,11 @@
 
 Record a portion of your desktop into a GIF
 
+`record-a-gif` was created out of frustration for either poor UI, poor compatibility with Linux, or both. It's based on well-tested technologies (e.g. [Electron][], [FFmpeg][]) so it should work well on most environments.
+
+[Electron]: https://github.com/atom/electron
+[FFmpeg]: https://www.ffmpeg.org/
+
 ## Getting Started
 Install the module with: `npm install record-a-gif`
 
