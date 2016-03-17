@@ -11,7 +11,12 @@ Select and record a portion of your desktop
 - X11 server, [FFmpeg][] requires this for its `x11grab` functionality
 - [npm][], usually installed with [Node.js][]
     - Used for installing dependencies
+    - We recommend installing via: <https://github.com/nodesource/distributions>
 - [FFmpeg][], used for recording the screen
+    - This might be known as `avconv` on your distribution
+    - For `apt` installation, this might be one of:
+        - `apt-get install ffmpeg`
+        - `apt-get install libav-tools`
 
 [npm]: http://npmjs.org/
 [Node.js]: http://nodejs.org/
