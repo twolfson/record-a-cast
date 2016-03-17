@@ -35,19 +35,19 @@ Select and record a portion of your desktop
 [Node.js]: http://nodejs.org/
 
 ## Getting Started
-Install the module globally via: `npm install -g record-a-cast`
+1. Install the module globally via `npm install -g record-a-cast`
 
-Then, start running the application via `record-a-cast recording.mov`
+2. Start running `record-a-cast` via `record-a-cast recording.mov`
 
-You will be prompted to select an area via a draggable/resizable window.
+3. Select an area via a draggable/resizable window
 
 ![Select an area image][]
 
-After the area has been placed, press `Enter` and FFmpeg will begin recording that area.
+4. Press `Enter` and FFmpeg will begin recording that area
 
-To stop recording, send a keyboard interrupt to `record-a-cast` (typically `Ctrl+C`).
+5. To stop recording, send a keyboard interrupt to `record-a-cast` (typically `Ctrl+C`)
 
-Your recording will be available at `recording.mov`
+6. Your recording will be available at `recording.mov`
 
 ![Recording image][Get a screencast image]
 
