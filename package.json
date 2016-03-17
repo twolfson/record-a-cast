@@ -33,6 +33,7 @@
     "electron-prebuilt": "~0.37.2",
     "mousetrap": "~1.5.3",
     "shell-quote": "~1.5.0",
+    "unidragger": "~2.1.0",
     "which": "~1.2.4"
   },
   "devDependencies": {
