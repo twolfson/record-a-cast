@@ -3,6 +3,7 @@
   <head>
     <title>select-geometry</title>
     <style>
+      /* Reset/normalize styles */
       * {
         box-sizing: border-box;
       }
@@ -17,6 +18,16 @@
         margin: 0;
       }
 
+      /* Custom styles */
+      body {
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+      body.is-dragging {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+      }
+
       .initial-prompt {
         position: absolute;
         text-align: center;
@@ -27,8 +38,6 @@
         /* TODO: Consider adjusting size of frame based on media size (e.g. smaller dashes for sub-100 */
         border: 5px dashed #CCCCCC;
         height: 100%;
-        cursor: -webkit-grab;
-        cursor: grab;
       }
     </style>
   </head>
