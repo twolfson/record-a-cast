@@ -1,8 +1,8 @@
-# record-a-gif [![Build status](https://travis-ci.org/twolfson/record-a-gif.svg?branch=master)](https://travis-ci.org/twolfson/record-a-gif)
+# record-a-cast [![Build status](https://travis-ci.org/twolfson/record-a-cast.svg?branch=master)](https://travis-ci.org/twolfson/record-a-cast)
 
 Record a portion of your desktop into a GIF
 
-`record-a-gif` was created out of frustration for either poor UI, poor compatibility with Linux, or both. It's based on well-tested technologies (e.g. [Electron][], [FFmpeg][]) so it should work well on most environments.
+`record-a-cast` was created out of frustration for either poor UI, poor compatibility with Linux, or both. It's based on well-tested technologies (e.g. [Electron][], [FFmpeg][]) so it should work well on most environments.
 
 This project's UI is based on Shutter's UI which we found intuitive and practical.
 
@@ -10,10 +10,10 @@ This project's UI is based on Shutter's UI which we found intuitive and practica
 [FFmpeg]: https://www.ffmpeg.org/
 
 ## Getting Started
-Install the module with: `npm install record-a-gif`
+Install the module with: `npm install record-a-cast`
 
 ```js
-var recordAGif = require('record-a-gif');
+var recordAGif = require('record-a-cast');
 recordAGif(); // 'awesome'
 ```
 

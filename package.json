@@ -1,8 +1,8 @@
 {
-  "name": "record-a-gif",
+  "name": "record-a-cast",
   "description": "Record a portion of your desktop into a GIF",
   "version": "1.0.0",
-  "homepage": "https://github.com/twolfson/record-a-gif",
+  "homepage": "https://github.com/twolfson/record-a-cast",
   "author": {
     "name": "Todd Wolfson",
     "email": "todd@twolfson.com",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/twolfson/record-a-gif.git"
+    "url": "git://github.com/twolfson/record-a-cast.git"
   },
   "bugs": {
-    "url": "https://github.com/twolfson/record-a-gif/issues"
+    "url": "https://github.com/twolfson/record-a-cast/issues"
   },
   "bin": {
-    "record-a-gif": "bin/record-a-gif.js"
+    "record-a-cast": "bin/record-a-cast.js"
   },
-  "main": "lib/record-a-gif",
+  "main": "lib/record-a-cast",
   "engines": {
     "node": ">= 0.10.0"
   },
