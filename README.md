@@ -8,11 +8,11 @@ Select and record a portion of your desktop
 [FFmpeg]: https://www.ffmpeg.org/
 
 ## Demonstration
-**1. Select an area:**
+**1. Select an area**
 
 ![Select an area image](http://i.imgur.com/hOIceGa.png)
 
-**2. Get a screencast:**
+**2. Get a screencast**
 
 ![Get a screencast image](http://i.imgur.com/jO8vvMa.gif)
 
