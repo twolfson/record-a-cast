@@ -2,8 +2,38 @@
 <html>
   <head>
     <title>get-geometry</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+      .initial-prompt {
+        position: absolute;
+        text-align: center;
+        color: white;
+      }
+
+      .dashed-frame {
+        border: 5px dashed #CCCCCC;
+        height: 100%;
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+    </style>
   </head>
   <body>
-    <p>Hello World</p>
+    <!-- TODO: Revisit prompt, first let's get it running -->
+    <!-- <p class="initial-prompt">Resize and move the frame as desired. Then, press <kbd>Enter</kbd> to continue.</p> -->
+    <div class="dashed-frame"></div>
   </body>
 </html>
