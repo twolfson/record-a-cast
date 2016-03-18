@@ -58,13 +58,20 @@ Our CLI currently supports the following:
 ```
 $ record-a-cast --help
 
-  Usage: record-a-cast [options] <outfile>
+  Usage: record-a-cast [options] <outfile> [-- --ffmpeg-options]
 
   Options:
 
     -h, --help     output usage information
     -V, --version  output the version number
 
+```
+
+As noted, we support passing through options to FFmpeg via a `--` delimiter. For example, we can pass `-r 10` (record at 10FPS) to `ffmpeg`:
+
+```bash
+record-a-cast out.mov -- -r 10
+# Invokes: /usr/bin/ffmpeg -video_size 20x20 -f x11grab -i :0+20,20 -y -r 10 out.mov
 ```
 
 ### Environment variables
