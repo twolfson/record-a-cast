@@ -6,8 +6,12 @@ That being said, we wanted to write down test cases and edge cases that we can r
 ## `select-geometry.js`
 - Resize each edge of window via window "frame"
     - Verify bounds match as expected
+    - when we have a divisor enabled
+        - Verify bounds match as expected
 - Resize each corner of window via window "frame"
     - Verify bounds match as expected
+    - when we have a divisor enabled
+        - Verify bounds match as expected
 - Drag window around via interior handle
     - Verify moves window as expected
 - Drag window to edge of desktop
@@ -22,6 +26,8 @@ That being said, we wanted to write down test cases and edge cases that we can r
         - Verify window retains size and immediately moves (no lag for negative offsets)
 - Resize window via arrow keys
     - Verify resizes window as expected
+    - when we have a divisor enabled
+        - Verify bounds match as expected
 - Resize window at edge of desktop via arrow keys
     - Verify window doesn't leave desktop or change size
         - **FAIL** Currently failing due to know knowing viewport boundaries
@@ -34,4 +40,3 @@ That being said, we wanted to write down test cases and edge cases that we can r
 - Verify a missing `outfile` will render help
 - Verify `outfile` writes to our file in `process.cwd()`
 - Verify `--delay` holds recording for `n` seconds
-    - TODO: `--delay` implementtation is pending
