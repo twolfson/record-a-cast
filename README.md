@@ -81,6 +81,22 @@ We support the following environment variables:
     - By default, we will search for `ffmpeg` and `avconv` on `PATH`
 
 ## Examples
+### Custom framerate
+When recording something like a GIF, we might want a reduced framerate to save on size and poor frame delays. Here's an example of recording a movie at 10FPS:
+
+```bash
+record-a-cast out.mov -- -r 10
+# Invokes: /usr/bin/ffmpeg -video_size 20x20 -f x11grab -i :0+20,20 -y -r 10 out.mov
+```
+
+### Duration
+Sometimes we might want to only record for a few seconds. In this example, we will set our framerate to 24FPS and record for 3 seconds (72 frames).
+
+```bash
+record-a-cast out.mov -- -r 24 -frames 72
+# Invokes: /usr/bin/ffmpeg -video_size 20x20 -f x11grab -i :0+20,20 -y -r 24 -frames 72 out.mov
+```
+
 ### Creating a GIF
 **Requirements:**
 
@@ -92,15 +108,15 @@ We support the following environment variables:
 **Script:**
 
 ```bash
-# Record our screencast
-record-a-cast recording.mov
+# Record our screencast with a reduced framerate
+# DEV: We use `-r 10` to output 10FPS since GIFs move slower
+record-a-cast recording.mov -- -r 10
 
 # Output each frame to a folder
 # DEV: When we tried to record directly to PNGs via FFmpeg, they were all empty
 #   Hence, this 2 step process
-# DEV: We use `-r 10` to output 10FPS since GIFs move slower
 mkdir frames
-ffmpeg -i recording.mov -r 10 frames/recording%03d.png
+ffmpeg -i recording.mov frames/recording%03d.png
 
 # DEV: If you want to remove any frames from the final product
 #   then navigate to `frames` and delete them
