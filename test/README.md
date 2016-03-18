@@ -30,7 +30,6 @@ That being said, we wanted to write down test cases and edge cases that we can r
 
 ## `record-a-cast.js`
 - Verify any arguments after `--` get sent to FFmpeg
-    - TODO: `--` implementation is pending
 - Verify `--help` renders help message
 - Verify a missing `outfile` will render help
 - Verify `outfile` writes to our file in `process.cwd()`
