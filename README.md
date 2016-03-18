@@ -62,10 +62,12 @@ $ record-a-cast --help
 
   Options:
 
-    -h, --help       output usage information
-    -V, --version    output the version number
-    --delay <delay>  Milliseconds to wait before recording starts
+    -h, --help                  output usage information
+    -V, --version               output the version number
+    --delay <delay>             Milliseconds to wait before recording starts
                        (default: 50 to prevent visible overlays)
+    --height-divisor <divisor>  Resize only to heights divisible by `m`
+    --width-divisor <divisor>   Resize only to widths divisible by `n`
 
 ```
 
@@ -83,6 +85,21 @@ We support the following environment variables:
     - By default, we will search for `ffmpeg` and `avconv` on `PATH`
 
 ## Examples
+### Custom height/width divisors
+On some computers, we can encounter errors like:
+
+```
+[libx264 @ 0x12f24c0] width not divisible by 2 (801x600)
+```
+
+These are caused by our codec requiring even heights/widths for its format. To work around this, we support snapping our selection to height/widths that are only even (e.g. `801 -> 802`).
+
+To run `record-a-cast` with snapping to even heights/widths, use:
+
+```bash
+record-a-cast --height-divisor 2 --width-divisor 2--out.mov
+```
+
 ### Custom framerate
 When recording something like a GIF, we might want a reduced framerate to save on size and poor frame delays. Here's an example of recording a movie at 10FPS:
 
