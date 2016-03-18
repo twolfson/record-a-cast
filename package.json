@@ -29,6 +29,7 @@
     "test": "npm run lint"
   },
   "dependencies": {
+    "async": "~1.5.2",
     "commander": "~2.9.0",
     "electron-prebuilt": "~0.37.2",
     "mousetrap": "~1.5.3",
