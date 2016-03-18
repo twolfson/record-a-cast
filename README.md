@@ -7,12 +7,6 @@ Select and record a portion of your desktop
 [Electron]: https://github.com/atom/electron
 [FFmpeg]: https://www.ffmpeg.org/
 
-**Features:**
-
-- Resizing handles at edges
-- Draggable window
-- Movement/resizing via arrow keys
-
 ## Demonstration
 **1) Select an area**
 
