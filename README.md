@@ -95,6 +95,9 @@ Sometimes we might want to only record for a few seconds. In this example, we wi
 ```bash
 record-a-cast out.mov -- -r 24 -frames 72
 # Invokes: /usr/bin/ffmpeg -video_size 20x20 -f x11grab -i :0+20,20 -y -r 24 -frames 72 out.mov
+
+# Compute duration dynamically in bash
+# record-a-cast out.mov -- -r 24 -frames "$((3 * 24))"
 ```
 
 ### Creating a GIF
