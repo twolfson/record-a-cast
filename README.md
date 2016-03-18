@@ -58,7 +58,7 @@ Our CLI currently supports the following:
 ```
 $ record-a-cast --help
 
-  Usage: record-a-cast [options] <outfile> [-- --ffmpeg-options]
+  Usage: record-a-cast [options] <outfile> [-- ffmpeg-options]
 
   Options:
 
