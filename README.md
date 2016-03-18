@@ -62,8 +62,10 @@ $ record-a-cast --help
 
   Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
+    -h, --help       output usage information
+    -V, --version    output the version number
+    --delay <delay>  Milliseconds to wait before recording starts
+                       (default: 50 to prevent visible overlays)
 
 ```
 
