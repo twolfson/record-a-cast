@@ -10,7 +10,10 @@ app.on('window-all-closed', function handleWindowsClosed () {
 
 // When Electron is done loading, launch our geometry selector
 app.on('ready', function handleReady () {
-  selectGeometry(function handleSelectGeometry (err, geometry) {
+  selectGeometry({
+    heightDivisor: 1,
+    widthDivisor: 1
+  }, function handleSelectGeometry (err, geometry) {
     // If there was an error, throw it
     if (err) {
       throw err;
