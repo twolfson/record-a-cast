@@ -38,3 +38,4 @@ That being said, we wanted to write down test cases and edge cases that we can r
 - Verify a missing `outfile` will render help
 - Verify `outfile` writes to our file in `process.cwd()`
 - Verify `--delay` holds recording for `n` seconds
+    - TODO: `--delay` implementtation is pending
