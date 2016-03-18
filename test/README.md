@@ -22,8 +22,9 @@ That being said, we wanted to write down test cases and edge cases that we can r
         - Verify window retains size and immediately moves (no lag for negative offsets)
 - Resize window via arrow keys
     - Verify resizes window as expected
-- Resize window to edge of desktop via arrow keys
+- Resize window at edge of desktop via arrow keys
     - Verify window doesn't leave desktop or change size
+        - **FAIL** Currently failing due to know knowing viewport boundaries
     - Resize window away from edge of desktop via arrow keys
         - Verify window retains other edges and immediately resizes (no lag for negative offsets)
 
