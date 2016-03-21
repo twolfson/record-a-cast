@@ -26,7 +26,7 @@ Support this project and [others by twolfson][twolfson-projects] via [PayPal][pa
 [![Support via PayPal][paypal-button]][paypal-twolfson]
 
 [twolfson-projects]: http://twolfson.com/projects
-[paypal-button]: http://rawgit.com/twolfson/paypal-github-button/master/dist/button.svg
+[paypal-button]: http://rawgit.com/twolfson/paypal-github-button/1.x.x/dist/button.svg
 [paypal-twolfson]: http://bit.ly/twolfson-paypal-5
 
 ## Requirements
