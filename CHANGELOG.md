@@ -1,4 +1,6 @@
 # record-a-cast changelog
+1.4.1 - Moved "Donating" section towards top in README
+
 1.4.0 - Added support for height/width divisors
 
 1.3.0 - Added support for `--delay`
