@@ -20,6 +20,15 @@ Select and record a portion of your desktop
 
 [Get a screencast image]: http://i.imgur.com/jO8vvMa.gif
 
+## Donating
+Support this project and [others by twolfson][twolfson-projects] via [PayPal][paypal-twolfson].
+
+[![Support via PayPal][paypal-button]][paypal-twolfson]
+
+[twolfson-projects]: http://twolfson.com/projects
+[paypal-button]: http://rawgit.com/twolfson/paypal-github-button/master/dist/button.svg
+[paypal-twolfson]: http://bit.ly/twolfson-paypal-5
+
 ## Requirements
 - X11 server, [FFmpeg][] requires this for its `x11grab` functionality
 - [npm][], usually installed with [Node.js][]
@@ -154,14 +163,6 @@ Want more variations on this? See the following links:
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via `npm run lint` and test via `npm test`.
-
-## Donating
-Support this project and [others by twolfson][gratipay] via [gratipay][].
-
-[![Support via Gratipay][gratipay-badge]][gratipay]
-
-[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
-[gratipay]: https://www.gratipay.com/twolfson/
 
 ## Unlicense
 As of Mar 17 2016, Todd Wolfson has released this repository and its contents to the public domain.
