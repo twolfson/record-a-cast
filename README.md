@@ -12,7 +12,7 @@ Select and record a portion of your desktop
 
 ![Select an area image][]
 
-[Select an area image]: http://i.imgur.com/hOIceGa.png)
+[Select an area image]: http://i.imgur.com/hOIceGa.png
 
 **2) Get a screencast**
 
