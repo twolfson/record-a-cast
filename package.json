@@ -24,7 +24,7 @@
   },
   "license": "Unlicense",
   "scripts": {
-    "lint": "twolfson-style lint bin/ lib/",
+    "lint": "eslint bin/ lib/ test/ --max-warnings 0",
     "select-geometry": "electron bin/select-geometry",
     "test": "npm run lint"
   },
@@ -38,13 +38,12 @@
     "which": "~1.2.4"
   },
   "devDependencies": {
+    "eslint": "~4.10.0",
+    "eslint-config-twolfson": "~1.0.0",
     "foundry": "~4.0.3",
     "foundry-release-git": "~2.0.2",
     "foundry-release-npm": "~2.0.2",
-    "jscs": "~1.7.3",
-    "jshint": "~2.5.10",
-    "mocha": "~1.11.0",
-    "twolfson-style": "~1.6.0"
+    "mocha": "~1.11.0"
   },
   "keywords": [
     "record",
