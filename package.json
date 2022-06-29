@@ -20,7 +20,7 @@
   },
   "main": "lib/record-a-cast",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 14.0.0"
   },
   "license": "Unlicense",
   "scripts": {
