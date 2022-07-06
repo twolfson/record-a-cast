@@ -1,7 +1,7 @@
 {
   "name": "record-a-cast",
   "description": "Select and record a portion of your desktop",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "homepage": "https://github.com/twolfson/record-a-cast",
   "author": {
     "name": "Todd Wolfson",

@@ -1,4 +1,6 @@
 # record-a-cast changelog
+1.5.2 - Added back missed shell-quote@1.7.3 upgrade
+
 1.5.1 - Removed Node.js@18 from Travis CI
 
 1.5.0 - Upgraded to shell-quote@1.7.3 to fix GitHub vulnerability warning and bumped to Node.js>=14
